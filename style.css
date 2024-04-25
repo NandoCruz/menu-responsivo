@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body{
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+header .menu-mobile{
+    display: none;
+}
+
+header .menu-desktop{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .menu-desktop img{
+    padding: 10px;
+}
+
+header .menu-desktop nav ul{
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+header .menu-desktop nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px 30px;
+    margin: 0 20px;
+}
+
+header .menu-desktop nav a{
+    display: inline-block;
+    color: #ccc;
+    text-decoration: none;
+    transition: .5s;
+}
+
+header .menu-desktop nav a:hover{
+    transform: scale(1.2);
+}
+
+header .redes-sociais{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F9C32D;
+    font-size: 35px;
+}
+
+header .redes-sociais i{
+    margin: 0 20px;
+    transition: .2s;
+    width: 35px;
+    height: 35px;
+}
+
+header .redes-sociais .icon i:hover{
+    transform: scale(1.2);
+    display: flex;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px 5px #F9C32D;
+}
+
+header .redes-sociais .linkedin i:hover{
+    border-radius: 10%;
+}
+
+@media screen and (max-width:1050px) {
+    header div.menu-desktop{
+        display: none;
+    }
+
+    header div.menu-mobile{
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    header div.menu-mobile img{
+        max-width: 200px;
+        height: 100%;
+        padding: 15px;
+    }
+
+    header div.menu-mobile button{
+        width: 40px;
+        height: 40px;
+        border: 2px solid #ccc;
+        background-color: transparent;
+        border-radius: 20%;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    header .menu-mobile button .linha{
+        width: 23px;
+        height: 2px;
+        position: relative;
+        display: block;
+        margin: 6px auto;
+        background-color: #ccc;
+        transform-origin: center;
+        transition: 0.2s;
+    }
+
+    header div.menu-mobile button:hover{
+        transform: scale(1.2);
+    }
+
+    header div.menu-mobile button.ativar{
+        border: 3px solid red;
+        box-shadow: 0px 0px 6px 3px red;
+    }
+
+    header button.ativar .linha:nth-child(1){
+        transform: translateY(7px) rotate(-45deg);
+        background-color: red;
+    }
+
+    header button.ativar .linha:nth-child(3){
+        transform: translateY(-9px) rotate(45deg);
+        background-color: red;
+    }
+    
+    header button.ativar .linha:nth-child(2){
+        width: 0;
+    }
+}
+
